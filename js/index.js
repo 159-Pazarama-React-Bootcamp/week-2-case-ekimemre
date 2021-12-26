@@ -144,7 +144,13 @@ function updateTodo(content, boolValue, todo_id) {
     .then((json) => console.log(json));
 }
 
+let element = document.body;
 function activeNightMode() {
-  let element = document.body;
+  element.classList.toggle("dark-mode");
+  let darkmodeValue = (element.className === "dark-mode") ? true : false;
+  localStorage.setItem("isDarkMode",`${darkmodeValue}`);
+}
+
+if(localStorage.getItem("isDarkMode") === "true"){ //sayfa ilk yüklendiğinde localStorage'da true olarak kaydedilmiş ise sayfayı siyah olarak yapıcak.
   element.classList.toggle("dark-mode");
 }
