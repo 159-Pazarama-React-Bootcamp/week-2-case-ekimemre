@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App for Pazarama</title>
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="username-div">
+        <input type="text" name="" placeholder="Kullanıcı Adınız:" id="usernameInput">
+        <button onclick="getUsername()" class="btn" id="usernameBtn">Kaydet</button>
+        <button onclick="activeNightMode()" class="btn" id=nightMode>🌙</button>
+    </div>
+    <div class="first-div">
+        <h2 id="usernameHeader">User's to-do list . . .</h2>
+    </div>
+    <div class="header-div">
+        <input type="text" placeholder="Yapılacak İş..." name="" id="todoInput">
+        <button onclick="newElement()" class="btn" id="addTodo">Ekle</button>
+        <button onclick="updateElement()" class="btn" id="updateTodo">Güncelle</button>
+    </div>
+    <div class="element-div">
+        <ul id="userList">
+        </ul>
+    </div>
+    <script src="js/index.js"></script>
+  </body>
+</html>
